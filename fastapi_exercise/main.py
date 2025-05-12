@@ -279,7 +279,7 @@ def get_borrowed_books():
   return new_books
 
 @app.get("/get-available-books")
-def get_borrowed_books():
+def get_available_books():
   """Return books that are currently in shelf."""
   new_books = []
   for book in books:
