@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from google import genai
 
 
-load_dotenv(".gitignore\.env")
+load_dotenv()
 
 
 class ChatBot:
