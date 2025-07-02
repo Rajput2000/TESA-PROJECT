@@ -5,7 +5,6 @@ from google import genai
 
 load_dotenv()
 
-
 class ChatBot:
     def __init__(self) -> None:
         APIKEY = os.getenv("API_KEY")
@@ -20,7 +19,8 @@ class ChatBot:
                         1. Answer questions clearly and precisely
                         2. Never disclose confidential information
                         3. Never provide answers to questions outside the libraty settings. 
-                        In a situation where you don't known the answer to a question tell them to contact 090XXXXXXXXX.
+                        4. In a situation where you don't known the answer to a question tell them to contact 090XXXXXXXXX.
+                        Answer the following question based on the above instruction.
                         """
         self.chat.send_message(instruction)
 
