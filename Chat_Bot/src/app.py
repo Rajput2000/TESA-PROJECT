@@ -12,6 +12,11 @@ st.title("Library Assistant")
 st.sidebar.title("User Session")
 user_id = st.sidebar.text_input("Enter your name or ID:", key="user_id")
 
+# Add GitHub link in the sidebar
+st.sidebar.markdown(
+    "[🔗 GitHub Repo](https://github.com/Rajput2000/TESA-PROJECT/tree/main/Chat_Bot)"
+)
+
 if not user_id:
     st.warning("Please enter your name or ID in the sidebar to start chatting.")
     st.stop()
@@ -40,3 +45,12 @@ if user_query:
 for role, message in st.session_state[chat_key]:
     with st.chat_message("AI" if role == "bot" else "Human"):
         st.write(message)
+
+# Optional: GitHub link at the bottom of the main page
+st.markdown(
+    "<hr style='margin-top: 2em;'>"
+    "<p style='text-align: center;'>"
+    "<a href='https://github.com/Rajput2000/TESA-PROJECT/tree/main/Chat_Bot' target='_blank'>🔗 View this project on GitHub</a>"
+    "</p>",
+    unsafe_allow_html=True,
+)
