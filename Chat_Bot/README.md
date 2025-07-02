@@ -23,7 +23,7 @@ TESA-PROJECT/
 │   ├── app.py                # Main Streamlit App
 │   └── service.py            # ChatBot class (handles backend logic)
 │
-├── fastapi/
+├── fast_api/
 │   ├── backend.py            # FastAPI backend with LLM endpoint
 │   └── fast_app_front_end.py # Streamlit frontend that consumes FastAPI
 │
@@ -66,12 +66,6 @@ In another terminal:
 ```bash
 streamlit run fast_app_front_end.py
 ```
-
----
-
-## 🔗 GitHub Repo
-
-[View Source on GitHub](https://github.com/Rajput2000/TESA-PROJECT/tree/main/Chat_Bot)
 
 ---
 
