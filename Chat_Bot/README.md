@@ -53,7 +53,7 @@ Use this method if you want to run the chatbot with a FastAPI backend that serve
 ### Step 1: Start FastAPI Backend
 
 ```bash
-cd fastapi
+cd fast_api
 uvicorn backend:app --reload
 ```
 
