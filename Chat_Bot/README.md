@@ -71,7 +71,7 @@ streamlit run fast_app_front_end.py
 
 ## 🛠 Requirements
 
-- Python 3.8+
+- Python 3.10+
 - Streamlit
 - FastAPI
 - Uvicorn
