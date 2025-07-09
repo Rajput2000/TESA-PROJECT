@@ -61,3 +61,8 @@ async def chat(message: ChatMessage):
         return {"response": response}
     response = fruit_master.get_details_from_gemini(question=input)
     return {"response": response}
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app:app", reload=True)
