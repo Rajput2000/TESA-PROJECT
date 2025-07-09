@@ -1,0 +1,112 @@
+{
+  "Tropical_Sweet_Fruits": {
+    "fruits": ["abiu", "ackee", "ambarella", "banana", "barbadine", "cempedak", "cherimoya", "custard_apple", "jackfruit", "langsat", "longan", "mabolo", "malay_apple", "mango", "mangosteen", "otaheite_apple", "papaya", "sapodilla", "sugar_apple", "ugli_fruit", "yali_pear"],
+    "description": "Ultra-sweet, creamy, or floral fruits from tropical regions.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ cup coconut milk, 1 frozen banana, 1 tsp honey, ice."
+  },
+  "Tart_Berries": {
+    "fruits": ["acai", "barberry", "black_berry", "black_mullberry", "chokeberry", "cranberry", "elderberry", "gooseberry", "goumi", "jaboticaba", "redcurrant", "sea_buckthorn", "white_currant"],
+    "description": "Small, acidic berries packed with antioxidants.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ cup Greek yogurt, 1 tbsp maple syrup, ½ cup almond milk."
+  },
+  "Citrus_Zesty_Fruits": {
+    "fruits": ["acerola", "finger_lime", "grapefruit", "kaffir_lime", "kumquat", "mandarine", "yuzu"],
+    "description": "High in vitamin C, with tangy or floral acidity.",
+    "smoothie_recipe": "1 peeled {{fruit}}, ½ cup pineapple, ½ cup coconut water, mint."
+  },
+  "Stone_Fruits": {
+    "fruits": ["apricot", "damson", "greengage", "jamaica_cherry", "jocote", "plumcot", "yellow_plum"],
+    "description": "Fleshy with a single pit, juicy and fragrant.",
+    "smoothie_recipe": "2 pitted {{fruit}}, ½ cup vanilla yogurt, ¼ tsp cardamom."
+  },
+  "Melons": {
+    "fruits": ["horned_melon"],
+    "description": "High-water-content and refreshing.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ lime juice, ½ cup mint tea, ice."
+  },
+  "Creamy_Fatty_Fruits": {
+    "fruits": ["avocado", "olive"],
+    "description": "Rich in healthy fats, smooth texture.",
+    "smoothie_recipe": "1 {{fruit}}, 1 banana, 1 handful spinach, 1 cup oat milk."
+  },
+  "Exotic_Superfruits": {
+    "fruits": ["camu_camu", "cupuacu", "emblic", "feijoa", "morinda", "pomegranate"],
+    "description": "Rare, nutrient-dense fruits with bold flavors.",
+    "smoothie_recipe": "½ cup {{fruit}}, 1 banana, 1 tsp spirulina, 1 cup almond milk."
+  },
+  "Figs_And_Multi_Seed_Fruits": {
+    "fruits": ["cluster_fig", "fig"],
+    "description": "Gel-filled with tiny seeds, honey-like sweetness.",
+    "smoothie_recipe": "3 {{fruit}}, ½ cup cashew milk, 1 date, cinnamon."
+  },
+  "Tropical_Tart_Fruits": {
+    "fruits": ["guava", "hard_kiwi", "passion_fruit", "grenadilla", "pineapple", "tamarind"],
+    "description": "Tangy-sweet tropical fruits, often high in vitamin C.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ orange juice, 1 tsp ginger, ice."
+  },
+  "Pomes": {
+    "fruits": ["apple", "quince"],
+    "description": "Crisp flesh surrounding a central seed core.",
+    "smoothie_recipe": "1 {{fruit}}, ½ tsp cinnamon, ½ cup carrot juice, ice."
+  },
+  "Nuts_And_Seed_Pods": {
+    "fruits": ["betel_nut", "brazil_nut", "cashew", "coconut", "corn_kernel", "oil_palm"],
+    "description": "Botanically fruits but used as nuts/seeds.",
+    "smoothie_recipe": "¼ cup {{fruit}} butter, 1 banana, 1 cup hemp milk."
+  },
+  "Vegetable_Fruits": {
+    "fruits": ["bitter_gourd", "eggplant", "jalapeno", "pea", "lablab", "chico"],
+    "description": "Botanically fruits but typically used as vegetables.",
+    "smoothie_recipe": "½ cup {{fruit}}, 1 cucumber, 1 celery stalk, lemon juice."
+  },
+  "Dark_Berries": {
+    "fruits": ["black_berry", "black_mullberry", "dewberry", "raspberry"],
+    "description": "Deeply pigmented, sweet-tart berries.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ cup beet juice, 1 tbsp cacao."
+  },
+  "Floral_Fragrant_Fruits": {
+    "fruits": ["cherimoya", "rose_hip", "rose_leaf_bramble", "hawthorn", "jambul"],
+    "description": "Delicate, perfumed flavors.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ cup jasmine tea, 1 tsp rosewater."
+  },
+  "Giant_Tropical_Fruits": {
+    "fruits": ["durian", "jackfruit", "pawpaw", "mountain_soursop", "chenet"],
+    "description": "Massive, pungent, or fibrous tropical fruits.",
+    "smoothie_recipe": "½ cup {{fruit}}, 1 cup mango, ½ cup coconut water."
+  },
+  "Hard_Shelled_Fruits": {
+    "fruits": ["coconut", "santol", "salak"],
+    "description": "Tough exterior, edible interior.",
+    "smoothie_recipe": "½ cup {{fruit}} flesh, 1 cup pineapple juice, ice."
+  },
+  "Cactus_Fruits": {
+    "fruits": ["prikly_pear", "dragonfruit"],
+    "description": "Bright, mildly sweet, from desert plants.",
+    "smoothie_recipe": "1 peeled {{fruit}}, ½ cup orange juice, lime."
+  },
+  "Wine_Fermentation_Fruits": {
+    "fruits": ["elderberry", "grape", "jaboticaba"],
+    "description": "Often used in wines or fermented drinks.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ cup pomegranate juice, 1 tsp chia."
+  },
+  "Medicinal_Fruits": {
+    "fruits": ["emblic", "morinda", "hawthorn", "jujube"],
+    "description": "Used in traditional medicine.",
+    "smoothie_recipe": "½ cup {{fruit}}, 1 tsp turmeric, 1 cup herbal tea."
+  },
+  "Mock_Berries": {
+    "fruits": ["indian_strawberry", "mock_strawberry"],
+    "description": "Resemble berries but with milder flavor.",
+    "smoothie_recipe": "1 cup {{fruit}}, ½ banana, ½ cup oat milk."
+  },
+  "Toxic_Fruits": {
+    "fruits": ["taxus_baccata"],
+    "description": "Poisonous and unsafe for consumption.",
+    "smoothie_recipe": "NOT RECOMMENDED - Seeds contain lethal toxins."
+  },
+  "Unique_Varieties": {
+    "fruits": ["hog_plum", "medlar", "rambutan", "strawberry_guava"],
+    "description": "Distinct fruits that defy easy categorization.",
+    "smoothie_recipe": "½ cup {{fruit}}, ½ cup mixed berries, 1 cup coconut water."
+  }
+}

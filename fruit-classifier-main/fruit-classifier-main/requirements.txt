@@ -1,0 +1,9 @@
+tensorflow==2.18.0
+google-genai==1.23.0
+numpy
+pillow
+json
+fastapi
+uvicorn[standard]
+python-multipart
+jinja2
