@@ -6,6 +6,11 @@
       "config": { "maxLambdaSize": "15mb" }
     }
   ],
+  "functions": {
+    "app.py": {
+      "runtime": "python3.10"
+    }
+  },
   "routes": [
     {
       "src": "/(.*)",
