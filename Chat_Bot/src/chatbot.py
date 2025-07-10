@@ -22,7 +22,7 @@ class ChatBot:
         # We will manage history manually, so no need to start_chat() here immediately
         # self.chat = self.model.start_chat()
         self.conversation_history = [] # Initialize an empty list to store history
-        self.history_limit = 10 # Example: Keep last 10 turns (user+model messages)
+        self.history_limit = 15 # Example: Keep last 15 turns (user+model messages)
 
     def handle_function_call(self, response):
         # Ensure the function_response is correctly formatted for Gemini
@@ -36,6 +36,7 @@ class ChatBot:
         for part in candidate.content.parts:
             if hasattr(part, 'function_call'):
                 function_call = part.function_call
+                # print(function_call)
 
                 if function_call.name == "search_book":
                     args = {k: v for k, v in function_call.args.items()}
@@ -77,6 +78,7 @@ class ChatBot:
     def send_message(self, message: str, user: str):
         self.user = user
 
+        
         # Append user message to history
         self.conversation_history.append({"role": "user", "parts": [message]})
 
@@ -95,28 +97,43 @@ class ChatBot:
 
         step = 1
         max_steps = 5
-
+        
         # Send the current user message (which is now the last item in conversation_history)
         response = chat_session.send_message(message) # Send only the current message, history is via start_chat
-
+        # print(response)
         while step <= max_steps:
             function_result = self.handle_function_call(response)
 
             if function_result:
                 function_name = function_result["function"]
                 result = function_result["result"]
+                # print(result)
+
+                if isinstance(result, dict):
+                    final_response_data = result
+
+                else:
+                    # Wrap non-dictionary results (lists, strings, booleans, etc.)
+                    final_response_data = {"data": result}
 
                 response_payload = {
                     "function_response": {
                         "name": function_name,
-                        "response": {"data": result} if isinstance(result, list) else result
+                        "response": final_response_data
                     }
                 }
 
+                # Ensure the 'response' part for the history append is ALSO a dictionary
+                # This is the crucial part that was missed in the previous fix for history.
+                if isinstance(result, dict):
+                    history_response_data = result
+                else:
+                    history_response_data = {"data": result} # Wrap lists/strings/booleans
+                
                 # Append model's function call and result to history
                 self.conversation_history.append({"role": "model", "parts": [{"function_call": genai.protos.FunctionCall(name=function_name, args={})}]}) # type: ignore
-                self.conversation_history.append({"role": "tool", "parts": [{"function_response": {"name": function_name, "response": result}}]})
-
+                self.conversation_history.append({"role": "tool", "parts": [{"function_response": {"name": function_name, "response": history_response_data}}]}) # Use the consistently dictionary-wrapped data for history
+                # print(self.conversation_history, len(self.conversation_history))
 
                 response = chat_session.send_message(response_payload)
                 step += 1
@@ -135,6 +152,7 @@ class ChatBot:
                 if model_text:
                     # Append model's text response to history
                     self.conversation_history.append({"role": "model", "parts": [model_text]})
+                    # print(self.conversation_history, len(self.conversation_history))
                     return model_text
                 else:
                     return "No text response available"
