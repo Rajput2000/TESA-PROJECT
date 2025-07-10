@@ -1,8 +1,12 @@
 import streamlit as st
 from src.chatbot import ChatBot
+import os 
 
+st.write(os.getcwd())  # Debugging line to check current working directory
+os.chdir("library")  # Change to the directory where the library file is located
+st.write(os.getcwd())  # Debugging line to check current working directory
 
-# Bot initialization
+"""# Bot initialization
 chat_bot = ChatBot()
 
 # App config
@@ -54,4 +58,4 @@ st.markdown(
     "<a href='https://github.com/Rajput2000/TESA-PROJECT/tree/main/Chat_Bot' target='_blank'>🔗 View this project on GitHub</a>"
     "</p>",
     unsafe_allow_html=True,
-)
+)"""
