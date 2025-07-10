@@ -4,9 +4,7 @@ from chatbot import ChatBot
 import os
 st.write("Current directory:", os.getcwd())
 #go back to the parent directory
-os.chdir("..")
-st.write("Changed directory to:", os.getcwd())
-os.chdir("library")
+os.chdir("../library")
 st.write("Changed directory to:", os.getcwd())
 """# Bot initialization
 chat_bot = ChatBot()
