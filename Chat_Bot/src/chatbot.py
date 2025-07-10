@@ -1,9 +1,9 @@
 import os
 from dotenv import load_dotenv
 import google.generativeai as genai
-from src.service import Library
-from src.systemprompt import SYSTEM_INSTRUCTIONS
-from src.function_call import library_functions
+from service import Library
+from systemprompt import SYSTEM_INSTRUCTIONS
+from function_call import library_functions
 
 # Load environment variables from .env file
 load_dotenv()
