@@ -2,9 +2,8 @@ import streamlit as st
 from src.chatbot import ChatBot
 import os 
 
-st.write(os.getcwd())  # Debugging line to check current working directory
-# Change to the Chat_Bot directory
-os.chdir("Chat_Bot/library")  # Change to the directory where the library file is located
+os.chdir("Chat_Bot")
+os.chdir("library")
 #list folders in current directory
 st.write(os.listdir('.'))  # List files and directories in the current directory
 
