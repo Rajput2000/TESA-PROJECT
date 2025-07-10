@@ -8,7 +8,8 @@ os.chdir("Chat_Bot/library")  # Change to the directory where the library file i
 #list folders in current directory
 st.write(os.listdir('.'))  # List files and directories in the current directory
 #get the relative path of the current file
-st.write(os.path.dirname(os.path.abspath(__file__)))
+
+st.write(os.path.abspath(__file__))
 
 """# Bot initialization
 chat_bot = ChatBot()
