@@ -1,92 +1,112 @@
-# 📚 Library Assistant Chatbot 🤖
+# 🤖 Library Assistant Chatbot
 
-This is an intelligent chatbot that serves as a **Library Assistant**, built using **Streamlit** and integrated with a backend LLM model. It helps users interact with a digital library assistant through either a direct chat interface or an API-powered setup.
-
----
-
-## 🚀 Features
-
-- Conversational assistant powered by an LLM.
-- Clean and interactive UI using **Streamlit**.
-- User session management.
-- Resettable chat history.
-- Dual setup options: Standalone Streamlit app or FastAPI-based backend.
+A conversational AI-powered assistant built with **Streamlit** and **Google Gemini**, designed to help users search, check availability, borrow, and return books in the **FUTMinna Library System**.
 
 ---
 
-## 📂 Project Structure
+## 📚 Features
 
-```
-TESA-PROJECT/
-│
-├── src/
-│   ├── app.py                # Main Streamlit App
-│   └── service.py            # ChatBot class (handles backend logic)
-│
-├── fast_api/
-│   ├── backend.py            # FastAPI backend with LLM endpoint
-│   └── fast_app_front_end.py # Streamlit frontend that consumes FastAPI
-│
-└── README.md
-```
+- 🔍 **Search Books** by title, author, section, or subsection
+- 📦 **Check Availability** of a specific book
+- 📖 **Borrow Books** directly through chat
+- 📤 **Return Borrowed Books** with user validation
+- 💬 Personalized **chat history per user**
+- 🧠 Function-calling via **Google Gemini**
+- 🗂️ Real-time updates from Excel-based book records
 
 ---
 
-## 🧠 Running the Streamlit App (Standalone)
+## 🚀 Quick Start
 
-You can try the app live here:  
-👉 [https://tesa-project-chat-bot.streamlit.app/](https://tesa-project-chat-bot.streamlit.app/)
-
-Or run it locally with:
+### 📁 Clone the Repository
 
 ```bash
-cd src
-streamlit run app.py
+git clone https://github.com/your-username/library-assistant-bot.git
+cd library-assistant-bot
 ```
 
----
-
-## ⚡ Alternative Setup with FastAPI Backend
-
-Use this method if you want to run the chatbot with a FastAPI backend that serves responses via API.
-
-### Step 1: Start FastAPI Backend
-
-```bash
-cd fast_api
-uvicorn backend:app --reload
-```
-
-This will start the backend at `http://127.0.0.1:8000`.
-
-### Step 2: Start Streamlit Frontend (FastAPI Client)
-
-In another terminal:
-
-```bash
-streamlit run fast_app_front_end.py
-```
-
----
-
-## 🛠 Requirements
-
-- Python 3.10+
-- Streamlit
-- FastAPI
-- Uvicorn
-- Any dependencies used in your `service.py` or LLM model
-
-Install them using:
+### 🔧 Install Requirements
 
 ```bash
 pip install -r requirements.txt
 ```
 
+### 🔐 Set Up Environment
+
+Create a `.env` file in the project root:
+
+```
+API_KEY=your_gemini_api_key
+```
+
+### 📊 Add Your Data
+
+Place your library file in:
+
+```
+library/Futminna_Library.xlsx
+```
+
+Make sure it has a sheet named **"Books"** with the following columns:
+
+- `Title`
+- `Author`
+- `Section`
+- `Subsection`
+- `Inshelf` (True/False)
+- `Borrower` (empty if not borrowed)
+
+### ▶️ Run the App
+
+```bash
+streamlit run app.py
+```
+
 ---
 
-## 📬 Feedback
+## 🗃️ Project Structure
 
-For issues or contributions, feel free to open a pull request or raise an issue on the [GitHub repo](https://github.com/Rajput2000/TESA-PROJECT/tree/main/Chat_Bot).
+```
+.
+├── app.py
+├── requirements.txt
+├── .env
+├── library/
+│   └── Futminna_Library.xlsx
+└── src/
+    ├── chatbot.py
+    ├── service.py
+    ├── systemprompt.py
+    └── function_call.py
+```
 
 ---
+
+## ⚙️ How It Works
+
+- The `chatbot.py` class uses **Google Gemini's Function Calling** to respond intelligently.
+- The `service.py` file handles real-time operations like searching, borrowing, and returning books via a Pandas DataFrame.
+- The `function_call.py` defines structured tools Gemini can invoke.
+- The `systemprompt.py` defines the AI's behavior and guides interaction.
+
+---
+
+## 📌 Notes
+
+- Gemini must have function calling and system instruction features enabled in your API plan.
+- Changes made to book status are written back to the Excel file.
+- Supports multiple users with independent chat sessions.
+
+---
+
+## 📎 License
+
+MIT License
+
+---
+
+## 🔗 Acknowledgements
+
+- [Google Gemini](https://ai.google.dev/)
+- [Streamlit](https://streamlit.io/)
+- [FUTMinna Library Dataset] — internal sample used for demonstration.
