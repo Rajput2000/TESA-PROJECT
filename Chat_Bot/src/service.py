@@ -1,9 +1,12 @@
 import re
 import numpy as np
 import pandas as pd
+import os 
 
 class Library():
   def __init__(self) -> None:
+    #print working directory
+    print(os.getcwd())
     self.book_path = "library\Futminna_Library.xlsx"
     self.books =  pd.read_excel(self.book_path, sheet_name="Books")
 
