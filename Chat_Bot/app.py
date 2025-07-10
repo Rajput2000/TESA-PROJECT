@@ -3,7 +3,7 @@ from src.chatbot import ChatBot
 import os 
 
 st.write(os.getcwd())  # Debugging line to check current working directory
-os.chdir("library")  # Change to the directory where the library file is located
+os.chdir("main/Chat_Bot/library")  # Change to the directory where the library file is located
 st.write(os.getcwd())  # Debugging line to check current working directory
 
 """# Bot initialization
