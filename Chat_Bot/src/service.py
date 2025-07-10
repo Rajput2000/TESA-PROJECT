@@ -4,7 +4,7 @@ import pandas as pd
 
 class Library():
   def __init__(self) -> None:
-    self.book_path = "src/Futminna_Library.xlsx"
+    self.book_path = "library/Futminna_Library.xlsx"
     self.books =  pd.read_excel(self.book_path, sheet_name="Books")
 
 
