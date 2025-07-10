@@ -1,5 +1,5 @@
 import streamlit as st
-from src.chatbot import ChatBot
+from chatbot import ChatBot
 import os 
 
 # Bot initialization
