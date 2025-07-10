@@ -3,6 +3,11 @@ from chatbot import ChatBot
 
 import os
 st.write("Current directory:", os.getcwd())
+#go back to the parent directory
+os.chdir("..")
+st.write("Changed directory to:", os.getcwd())
+#print directory contents
+st.write("Directory contents:", os.listdir())
 """# Bot initialization
 chat_bot = ChatBot()
 
