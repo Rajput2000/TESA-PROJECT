@@ -3,7 +3,7 @@ from chatbot import ChatBot
 
 import os
 st.write("Current directory:", os.getcwd())
-# Bot initialization
+"""# Bot initialization
 chat_bot = ChatBot()
 
 # App config
@@ -55,4 +55,4 @@ st.markdown(
     "<a href='https://github.com/Rajput2000/TESA-PROJECT/tree/main/Chat_Bot' target='_blank'>🔗 View this project on GitHub</a>"
     "</p>",
     unsafe_allow_html=True,
-)
+)"""
