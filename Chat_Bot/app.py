@@ -1,6 +1,14 @@
 import streamlit as st
 from src.chatbot import ChatBot
+import os
 
+
+folder_path = "library"
+files = os.listdir(folder_path)
+
+st.write("Files in library/:")
+for f in files:
+    st.write(f)
 
 # Bot initialization
 chat_bot = ChatBot()
