@@ -1,6 +1,8 @@
 import streamlit as st
 from chatbot import ChatBot
 
+import os
+st.write("Current directory:", os.getcwd())
 # Bot initialization
 chat_bot = ChatBot()
 
