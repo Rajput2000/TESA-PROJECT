@@ -68,7 +68,6 @@ streamlit run app.py
 
 ```
 .
-├── app.py
 ├── requirements.txt
 ├── .env
 ├── library/
@@ -78,6 +77,7 @@ streamlit run app.py
     ├── service.py
     ├── systemprompt.py
     └── function_call.py
+    └── app.py
 ```
 
 ---
