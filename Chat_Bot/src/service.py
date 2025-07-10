@@ -1,10 +1,19 @@
 import re
 import numpy as np
 import pandas as pd
+import os
+
+
+
+
 
 class Library():
   def __init__(self) -> None:
-    self.book_path = "library/Futminna_Library.xlsx"
+    # Absolute path to the directory where app.py lives
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    self.book_path = os.path.join(BASE_DIR, "library", "Futminna_Library.xlsx")
+    # Load the books data from the Excel file
     self.books =  pd.read_excel(self.book_path, sheet_name="Books")
 
 
