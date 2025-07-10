@@ -4,7 +4,8 @@ import pandas as pd
 
 class Library():
   def __init__(self) -> None:
-    self.books =  pd.read_excel("library/Futminna_Library.xlsx", sheet_name="Books")
+    self.book_path = "../library/Futminna_Library.xlsx"
+    self.books =  pd.read_excel(self.book_path, sheet_name="Books")
 
 
   def search_book(self, title=None, author=None, section=None, subsection=None):
@@ -109,7 +110,7 @@ class Library():
     self.books.at[index, "Borrower"] = user
 
     borrowed_book = self.books.loc[index].to_dict()
-    self.books.to_excel("library/Futminna_Library.xlsx", index=False, sheet_name="Books") 
+    self.books.to_excel(self.book_path, index=False, sheet_name="Books")
 
     return {
         "success": True,
@@ -146,7 +147,7 @@ class Library():
     self.books.at[index, "Borrower"] = ""
 
     returned_book = self.books.loc[index].to_dict()
-    self.books.to_excel("library/Futminna_Library.xlsx", index=False, sheet_name="Books")
+    self.books.to_excel(self.book_path, index=False, sheet_name="Books")
 
     return {
         "success": True,
