@@ -7,7 +7,7 @@ st.write(os.getcwd())  # Debugging line to check current working directory
 os.chdir("Chat_Bot")  # Change to the directory where the library file is located
 #list folders in current directory
 st.write(os.listdir('.'))  # List files and directories in the current directory
-
+st.write(os.path.dirname(os.path.abspath(__file__)))
 
 """# Bot initialization
 chat_bot = ChatBot()
